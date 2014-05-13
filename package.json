@@ -1,0 +1,22 @@
+{
+  "name": "k-m-file",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/285858315/k-m-file.git"
+  },
+  "keywords": [
+    "k-m"
+  ],
+  "author": "285858315@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/285858315/k-m-file/issues"
+  },
+  "homepage": "https://github.com/285858315/k-m-file"
+}
