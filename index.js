@@ -7,7 +7,7 @@ var fs = require("fs");
 
 function mkdirSync(url,mode,cb){
     var path = require("path"), arr = url.split("/");
-    mode = mode || 0755;
+    mode = mode || "0755";
     cb = cb || function(){};
     if(arr[0]==="."){//处理 ./aaa
         arr.shift();
@@ -40,7 +40,7 @@ var _write = function(file,data){
             console.log('出错了',e);
         }
     });
-    fs.open(file,"w",0644,function(e,fd){
+    fs.open(file,"w","0644",function(e,fd){
         if(e) throw e;
         if(typeof data != "string"){data = JSON.stringify(data)};
         fs.write(fd,data,0,'utf8',function(e){
@@ -84,7 +84,7 @@ var _list = function(dir){
     for(var i = 0; i < list_file.length; i++){
         file = fs.lstatSync(dir+list_file[i]);
         if(!file.isDirectory()){
-            list_res.push(read(dir+list_file[i]));
+            list_res.push(_read(dir+list_file[i]));
         }
     }
     return list_res;
